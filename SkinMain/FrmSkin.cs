@@ -16,10 +16,16 @@ namespace SkinMain
         public FrmSkin()
         {
             InitializeComponent();
+            //this.lab_biaoti = "FrmSkin";
+            //statusStrip1.Visible = false;
+            panel3.BackColor = Color.Red;
+            statusStrip1.BackColor = Color.Red;
+            statusStrip1.Items.Add("测试1");
         }
+
         #region 窗体样式属性
 
-        #region 标题栏移动
+        #region 标题栏拖拽移动
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);

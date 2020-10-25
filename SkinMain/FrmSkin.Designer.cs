@@ -36,7 +36,8 @@
             this.pbox_guanbi = new System.Windows.Forms.PictureBox();
             this.pbox_zuixiaohua = new System.Windows.Forms.PictureBox();
             this.pbos_zuidahua = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -47,10 +48,11 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.statusStrip1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(798, 393);
+            this.panel3.Size = new System.Drawing.Size(798, 423);
             this.panel3.TabIndex = 1;
             // 
             // panel1
@@ -58,7 +60,6 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -82,9 +83,9 @@
             this.lab_biaoti.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lab_biaoti.Location = new System.Drawing.Point(3, 4);
             this.lab_biaoti.Name = "lab_biaoti";
-            this.lab_biaoti.Size = new System.Drawing.Size(82, 17);
+            this.lab_biaoti.Size = new System.Drawing.Size(54, 17);
             this.lab_biaoti.TabIndex = 0;
-            this.lab_biaoti.Text = "Winfrom窗体";
+            this.lab_biaoti.Text = "FrmSkin";
             this.lab_biaoti.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // panel5
@@ -140,23 +141,25 @@
             this.pbos_zuidahua.MouseEnter += new System.EventHandler(this.pbox_XXX_MouseEnter);
             this.pbos_zuidahua.MouseLeave += new System.EventHandler(this.pbox_XXX_MouseLeave);
             // 
-            // panel4
+            // statusStrip1
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 418);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(798, 30);
-            this.panel4.TabIndex = 2;
+            this.statusStrip1.Location = new System.Drawing.Point(0, 401);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(798, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // Form1
+            // FrmSkin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "FrmSkin";
             this.Text = "Form1";
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -178,7 +181,7 @@
         protected System.Windows.Forms.PictureBox pbox_guanbi;
         protected System.Windows.Forms.PictureBox pbox_zuixiaohua;
         protected System.Windows.Forms.PictureBox pbos_zuidahua;
-        protected System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 
