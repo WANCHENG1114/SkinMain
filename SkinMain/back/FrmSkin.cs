@@ -13,19 +13,11 @@ namespace SkinMain
 {
     public partial class FrmSkin : Form
     {
-        protected System.Windows.Forms.Panel panel3;
-        protected System.Windows.Forms.Panel panel1;
-        protected System.Windows.Forms.Panel panel2;
-        protected System.Windows.Forms.Label lab_biaoti;
-        protected System.Windows.Forms.Panel panel5;
-        protected System.Windows.Forms.PictureBox pbox_guanbi;
-        protected System.Windows.Forms.PictureBox pbox_zuixiaohua;
-        protected System.Windows.Forms.PictureBox pbos_zuidahua;
         public FrmSkin()
         {
             InitializeComponent();//窗体构造函数
 
-            #region Windows 窗体设计
+            #region MyRegion
 
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -156,8 +148,10 @@ namespace SkinMain
             this.ResumeLayout(false);
             
             #endregion
+
+
         }
-        
+
         #region 窗体样式属性
 
         #region 标题栏拖拽移动
@@ -245,7 +239,7 @@ namespace SkinMain
 
         #endregion
     }
-
+    
     public class _ClassInfo
     {
         /// <summary>

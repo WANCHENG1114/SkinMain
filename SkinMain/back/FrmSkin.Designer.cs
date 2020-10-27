@@ -1,32 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SkinMain
+﻿namespace SkinMain
 {
-    public partial class FrmSkin : Form
+    partial class FrmSkin
     {
-        protected System.Windows.Forms.Panel panel3;
-        protected System.Windows.Forms.Panel panel1;
-        protected System.Windows.Forms.Panel panel2;
-        protected System.Windows.Forms.Label lab_biaoti;
-        protected System.Windows.Forms.Panel panel5;
-        protected System.Windows.Forms.PictureBox pbox_guanbi;
-        protected System.Windows.Forms.PictureBox pbox_zuixiaohua;
-        protected System.Windows.Forms.PictureBox pbos_zuidahua;
-        public FrmSkin()
+        /// <summary>
+        /// 必需的设计器变量。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// 清理所有正在使用的资源。
+        /// </summary>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        protected override void Dispose(bool disposing)
         {
-            InitializeComponent();//窗体构造函数
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-            #region Windows 窗体设计
+        #region Windows 窗体设计器生成的代码
 
+        /// <summary>
+        /// 设计器支持所需的方法 - 不要修改
+        /// 使用代码编辑器修改此方法的内容。
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -154,115 +155,19 @@ namespace SkinMain
             ((System.ComponentModel.ISupportInitialize)(this.pbox_zuixiaohua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbos_zuidahua)).EndInit();
             this.ResumeLayout(false);
-            
-            #endregion
-        }
-        
-        #region 窗体样式属性
 
-        #region 标题栏拖拽移动
-        protected override void OnMouseMove(MouseEventArgs e)
-        {
-            base.OnMouseMove(e);
-            if (e.Button == MouseButtons.Left)
-            {
-                //这里一定要判断鼠标左键按下状态，否则会出现一个很奇葩的BUG，不信邪可以试一下~~
-                ReleaseCapture();
-                SendMessage(Handle, 0x00A1, 2, 0);
-            }
-        }
-        //窗体移动API
-        [DllImport("user32.dll")]
-        private static extern bool ReleaseCapture();
-        [DllImport("user32.dll")]
-        private static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
-        {
-            OnMouseMove(e);
-            if (e.Button == MouseButtons.Left && e.Clicks == 2)
-            {
-                if (WindowState == FormWindowState.Maximized)
-                {
-                    this.WindowState = FormWindowState.Normal;
-                }
-                else
-                {
-                    this.MaximumSize = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-                    this.WindowState = FormWindowState.Maximized;
-                }
-            }
         }
 
         #endregion
 
-        #region 小大关
-        private void pbox_XXX_MouseEnter(object sender, EventArgs e)
-        {
-            PictureBox pictureBox = (PictureBox)sender;
-            pictureBox.BackColor = Color.White;
-        }
-        private void pbox_XXX_MouseLeave(object sender, EventArgs e)
-        {
-            PictureBox pictureBox = (PictureBox)sender;
-            pictureBox.BackColor = SystemColors.Control;
-        }
-        private void pbos_zuidahua_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-            else
-            {
-                this.MaximumSize = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);
-                this.WindowState = FormWindowState.Maximized;
-            }
-        }
-
-        private void pbox_zuixiaohua_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-        private void pbox_guanbi_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        #endregion
-
-        #region 窗体阴影
-
-        private const int CS_DropSHADOW = 0x20000;
-        private const int GCL_STYLE = (-26);
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        private static extern int SetClassLong(IntPtr hwnd, int nIndex, int dwNewLong);
-        [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        private static extern int GetClassLong(IntPtr hwnd, int nIndex);
-
-
-        #endregion
-
-        #endregion
-    }
-
-    public class _ClassInfo
-    {
-        /// <summary>
-        /// 窗体背景颜色
-        /// </summary>
-        public Color? _color { get; set; }
-        /// <summary>
-        /// 窗体标题
-        /// </summary>
-        public string _labStr { get; set; } 
-        /// <summary>
-        /// 是否显示窗体状态栏
-        /// </summary>
-        public bool _staBool { get; set; } 
-        /// <summary>
-        /// 窗体状态栏文本类容
-        /// </summary>
-        public string _staStr { get; set; } 
+        protected System.Windows.Forms.Panel panel3;
+        protected System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.Panel panel2;
+        protected System.Windows.Forms.Label lab_biaoti;
+        protected System.Windows.Forms.Panel panel5;
+        protected System.Windows.Forms.PictureBox pbox_guanbi;
+        protected System.Windows.Forms.PictureBox pbox_zuixiaohua;
+        protected System.Windows.Forms.PictureBox pbos_zuidahua;
     }
 }
+
